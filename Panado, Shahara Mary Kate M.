@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jay-An Enero Reyes - Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #fce4ec; 
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff; 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center; 
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px; 
+            border: 3px solid #ff69b4; 
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+            border: 1px solid #ffb3ba; 
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: left; 
+        }
+        .section-header {
+            background-color: #ff69b4; 
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .section-header:hover {
+            background-color: #e91e63; 
+        }
+        .section-content {
+            display: none;
+            padding: 15px;
+            background-color: #fce4ec; 
+        }
+        .section-content.show {
+            display: block;
+        }
+        .toggle-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <img src="Picture" alt="Jay-An Enero Reyes Profile Picture" class="profile-pic">
+        
+        <h1>Jay-An Enero Reyes - Profile</h1>
+        
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('personal')">
+                <span>Personal Information</span>
+                <button class="toggle-btn" id="btn-personal">+</button>
+            </div>
+            <div class="section-content" id="personal">
+                <p><strong>Name:</strong> Shahara Mary Kate Panado</p>
+                <p><strong>Date of Birth:</strong> June 26, 2004</p>
+                <p><strong>Place of Birth:</strong> Placer, Masbate City</p>
+                <p><strong>Age:</strong> 21 years old</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('about')">
+                <span>About Me</span>
+                <button class="toggle-btn" id="btn-about">+</button>
+            </div>
+            <div class="section-content" id="about">
+                <p>I am an aspiring Web Designer and a natural critical thinker who enjoys expressing creativity, whether through design or joining TikTok trends. I’m hardworking, friendly, and eager to learn, always looking for ways to improve my skills. At the same time, I can be an overthinker, sometimes too focused on details, and a bit shy or moody when I’m not comfortable, but I’m continuously working on these traits to become a better version of myself.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('motto')">
+                <span>Motto</span>
+                <button class="toggle-btn" id="btn-motto">+</button>
+            </div>
+            <div class="section-content" id="motto">
+                <p>If you are happy, clap your hands!</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(sectionId) {
+            const content = document.getElementById(sectionId);
+            const btn = document.getElementById('btn-' + sectionId);
+            if (content.classList.contains('show')) {
+                content.classList.remove('show');
+                btn.textContent = '+';
+            } else {
+                content.classList.add('show');
+                btn.textContent = '-';
+            }
+        }
+    </script>
+</body>
+</html>
